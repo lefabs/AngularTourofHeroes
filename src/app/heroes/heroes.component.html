@@ -1,13 +1,3 @@
-<!-- Done when we wanted to display a single Hero
-    <h2>{{hero.name | uppercase}} Details</h2>
-<div><span>id: </span> {{hero.id}}</div>
-
-<div>
-<label> name: <input [(ngModel)]="hero.name"  placeholder="name"/>
-</label>
-
-</div>
--->
 
 <h2> My Heroes</h2>
     <ul class="heroes">
@@ -25,19 +15,20 @@
 
     </ul>
 
-<!--Displays the selected hero from list of heros shown above-->
-    <div *ngIf="selectedHero">
+<!--Add the hero detail selector here and 
+bind the selectedHero to the hero-detail hero property-->
 
-        <h2>{{selectedHero.name | uppercase}} Details</h2>
-        <div>
-            <span>id: </span> {{selectedHero.id }}</div>
-        
-        <div>
-            <!--Two way binding [()] using the ngModel -->
-            <label> name: <input [(ngModel)]="selectedHero.name"  placeholder="name"/>
-            </label>   
-        </div>     
+<app-hero-detail [hero]="selectedHero"> </app-hero-detail>
 
-    </div>
 
+<!-- Done when we wanted to display a single Hero
+    <h2>{{hero.name | uppercase}} Details</h2>
+<div><span>id: </span> {{hero.id}}</div>
+
+<div>
+<label> name: <input [(ngModel)]="hero.name"  placeholder="name"/>
+</label>
+
+</div>
+-->
 
